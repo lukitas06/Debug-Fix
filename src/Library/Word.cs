@@ -18,6 +18,7 @@ namespace WordsPhrases
         /// <param name="text">El texto de la palabra.</param>
         public Word(string text)
         {
+            text=string.Join("",text.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
             this.Text = text;
         }
 
@@ -28,8 +29,9 @@ namespace WordsPhrases
         /// <value>El texto de la palabra</value>
         public string Text
         {
-            get
-            {
+            
+            get{
+                
                 return this.text;
             }
 
@@ -38,5 +40,6 @@ namespace WordsPhrases
                 this.text = value;
             }
         }
+        
     }
 }
